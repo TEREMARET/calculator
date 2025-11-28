@@ -5,6 +5,9 @@ export function isIpValid(ip: string): boolean {
   );
 }
 
+
+
+
 export function getNetworkAddress(ip: string, mask: string): string {
   const ipOctets = ip.split('.');
   const maskOctets = mask.split('.');
@@ -16,6 +19,8 @@ export function getNetworkAddress(ip: string, mask: string): string {
 
   return `${result[0]}.${result[1]}.${result[2]}.${result[3]}`;
 }
+
+
 
 export function getAddressesCount(mask: string): number {
   let binaryMask = '';

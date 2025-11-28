@@ -1,3 +1,7 @@
 <template>
-  <div>Тут что-то будет!</div>
+  <main>
+    <h1>Калькулятор подсетей</h1>
+    <div>
+    </div>
+  </main>
 </template>
