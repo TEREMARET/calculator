@@ -1,12 +1,7 @@
 export function isIpValid(ip: string): boolean {
-  if (!ip) return false;
-  
   return (
     /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/.test(ip) &&
-    ip.split('.').every((octet) => {
-      const num = parseInt(octet, 10);
-      return num >= 0 && num <= 255 && octet === num.toString();
-    })
+    ip.split('.').every((octet) => Number(octet) <= 255)
   );
 }
 
