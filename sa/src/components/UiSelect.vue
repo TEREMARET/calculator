@@ -1,19 +1,20 @@
+<script setup lang="ts">
+import { maskid } from '../ipMasks';
+
+</script>
+
 <template>
   <div>
-      <select v-model="selectedItem" v-on:change="$emit('selected', selectedItem )">
-        <option v-for="item in items" v-bind:key="item.id" :value="item" >{{item.name}}</option>
+      <select>
+        <option v-for="id in maskid" :key="id" :value="id">{{ id }}</option>
       </select>
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'ipMask',
-    props: ['items'],
-    data() {
-      return{
-        selectedItem: null
-      }
-    }
-  }
-</script>
+<style>
+select {
+  width: 100px;
+  height: 50px;
+}
+
+</style>
